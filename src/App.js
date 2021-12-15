@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-    <h1>Gevonden afval in Nederland</h1>
+    <h1>Gevonden afval in Nederland (test)</h1>
       <ReactMapGL
         {...viewport}
         mapStyle="mapbox://styles/mapbox/dark-v10"
