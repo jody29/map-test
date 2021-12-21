@@ -23,7 +23,7 @@ export default function Map() {
     const data = mcData
     const trash = data ? data : []
 
-    const filteredData = trash.filter(d => d.Jaar === 2019)
+    const filteredData = trash.filter(d => d.Jaar === 2021)
     
     const points = filteredData.map(data => ({
       type: "Feature",
@@ -85,7 +85,7 @@ export default function Map() {
                       onClick={() => {
                         const expansionZoom = Math.min(
                           supercluster.getClusterExpansionZoom(cluster.id),
-                          20
+                          30
                         )
 
                         setViewport({
@@ -94,7 +94,7 @@ export default function Map() {
                           longitude,
                           zoom: expansionZoom,
                           transitionInterpolator: new FlyToInterpolator({
-                            speed: 2
+                            speed: 1
                           }),
                           transitionDuration: "auto"
                         })
@@ -114,7 +114,7 @@ export default function Map() {
                   longitude={longitude}
                 >
                   <svg width={10} height={10}>
-                    <circle r={2.5} transform='translate(5, 5)' fill='red'></circle>
+                    <circle r={2.5} transform='translate(5, 5)' fill='#31A3DD'></circle>
                   </svg>
                 </Marker>
               )
