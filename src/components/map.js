@@ -13,7 +13,7 @@ export default function Map() {
         width: '100vw',
         height: '40em',
         zoom: 6.8,
-        pitch: 0,
+        pitch: 50,
         bearing: 0
     })
     const mapRef = useRef()
@@ -23,7 +23,7 @@ export default function Map() {
     const data = mcData
     const trash = data ? data : []
 
-    const filteredData = trash.filter(d => d.Jaar === 2021)
+    const filteredData = trash.filter(d => d.Jaar === 2019)
     
     const points = filteredData.map(data => ({
       type: "Feature",
@@ -53,7 +53,7 @@ export default function Map() {
           <ReactMapGL
             {...viewport}
             maxZoom={30}
-            mapStyle="mapbox://styles/mapbox/dark-v10"
+            mapStyle="mapbox://styles/jody569/ckxhf4soy3s5114mx1ei3id2v"
             mapboxApiAccessToken='pk.eyJ1Ijoiam9keTU2OSIsImEiOiJja3g3amJ5MGowMW8wMm5zZTlwN3Fjb2t0In0.99DjUaNvteP2DPXThnnHXg'
             onViewportChange={newviewport => {
               setViewport({ ...newviewport })
