@@ -5,17 +5,19 @@ import replaceComma from '../filters/replaceComma'
 import useSupercluster from 'use-supercluster'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import './map.css'
+import MapInfo from './mapInfo'
 
 export default function Map() {
     const [viewport, setViewport] = useState({
         latitude: 52.21483,
-        longitude: 5.70388,
+        longitude: 6.300000,
         width: '100vw',
         height: '40em',
         zoom: 6.8,
-        pitch: 50,
+        pitch: 0,
         bearing: 0
     })
+    const [showInfo, setShowInfo] = useState(true)
     const mapRef = useRef()
 
     let lastId = 0
@@ -88,6 +90,8 @@ export default function Map() {
                           30
                         )
 
+                        setShowInfo(false)
+
                         setViewport({
                           ...viewport,
                           latitude,
@@ -120,7 +124,7 @@ export default function Map() {
               )
             })}
             
-            
+            { showInfo ? <MapInfo /> : null}
           </ReactMapGL>
         </>
       );

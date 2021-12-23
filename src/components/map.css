@@ -1,12 +1,18 @@
 .cluster-marker {
-    color: #31A3DD;
-    background: #FFFFFF;
+    color: #FFF;
+    background: #FF6600;
     border-radius: 50%;
     padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    box-shadow: 0px 0px 5px white;
     font-weight: bold;
     cursor: pointer;
+}
+
+.cluster-marker:hover {
+    transform: scale(1.1);
+    transition: 100ms;
 }

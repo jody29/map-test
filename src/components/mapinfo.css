@@ -1,0 +1,45 @@
+.mapInfo {
+    width: 27em;
+    height: fit-content;
+    position: relative;
+    left: 55em;
+    top: 4em;
+    background-color: white;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.mapInfo h1 {
+    width: fit-content;
+    margin: 0;
+    font-size: 8em;
+    color: #31A3DD;
+}
+
+.mapInfo h2 {
+    font-size: 2.1em;
+}
+
+.mapInfo h2:first-of-type {
+    margin-bottom: -.3em;
+}
+
+.mapInfo h2:nth-of-type(2) {
+    margin-top: -.3em;
+    margin-bottom: 1em;
+}
+
+.mapInfo p {
+    width: 27em;
+}
+
+.mapInfo button {
+    background-color: #FF6600;
+    outline: none;
+    stroke: none;
+    border: 0px;
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+
+}
