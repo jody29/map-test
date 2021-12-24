@@ -2,11 +2,12 @@
     width: 27em;
     height: fit-content;
     position: relative;
-    left: 55em;
+    left: 75em;
     top: 4em;
     background-color: white;
     padding: 2em;
     border-radius: 1em;
+    box-shadow: 0px 0px 5px gray;
 }
 
 .mapInfo h1 {
