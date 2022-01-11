@@ -21,11 +21,12 @@ export default function Map() {
     const mapRef = useRef()
 
     let lastId = 0
+    let selectedYear = 2019
 
     const data = mcData
     const trash = data ? data : []
 
-    const filteredData = trash.filter(d => d.Jaar === 2019)
+    const filteredData = trash.filter(d => d.Jaar === selectedYear)
     
     const points = filteredData.map(data => ({
       type: "Feature",
@@ -39,6 +40,8 @@ export default function Map() {
       }
     }))
 
+    console.log(filteredData )
+
     const bounds = mapRef.current ? mapRef.current.getMap().getBounds().toArray().flat() : null
 
     const { clusters, supercluster } = useSupercluster({
@@ -48,6 +51,9 @@ export default function Map() {
       options: { radius: 50, maxZoom: 18}
     })
 
+    const hideInfo = () => {
+      viewport.zoom > 6.8 ? setShowInfo(false) : setShowInfo(true)
+    }
 
     return (
         <>
@@ -60,6 +66,7 @@ export default function Map() {
             onViewportChange={newviewport => {
               setViewport({ ...newviewport })
             }}
+            onWheel={hideInfo}
             ref={mapRef}
           >
             {clusters.map(cluster => {

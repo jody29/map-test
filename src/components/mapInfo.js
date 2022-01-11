@@ -6,6 +6,11 @@ export default function MapInfo() {
 
     const data = mcData
 
+    const sayHello = (e) => {
+        e.preventDefault()
+        console.log('hello')
+      }
+
     return (
         <div className='mapInfo'>
             <h2>
@@ -18,7 +23,7 @@ export default function MapInfo() {
             Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem
             </p>
 
-            <button>
+            <button onClick={sayHello}>
                 Lees meer
             </button>
         </div>
