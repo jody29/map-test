@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useContext, useRef, useState } from 'react'
 import ReactMapGL, { FlyToInterpolator, Marker } from 'react-map-gl'
 import mcData from '../data/mcdonalds.json'
 import replaceComma from '../filters/replaceComma'
@@ -6,6 +6,7 @@ import useSupercluster from 'use-supercluster'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import './map.css'
 import MapInfo from './mapInfo'
+import { YearContext } from './provider'
 
 export default function Map() {
     const [viewport, setViewport] = useState({
@@ -21,12 +22,12 @@ export default function Map() {
     const mapRef = useRef()
 
     let lastId = 0
-    let selectedYear = 2019
+    const {selectedYear} = useContext(YearContext)
 
     const data = mcData
     const trash = data ? data : []
 
-    const filteredData = trash.filter(d => d.Jaar === selectedYear)
+    const filteredData = trash.filter(d => d.Jaar === parseInt(selectedYear))
     
     const points = filteredData.map(data => ({
       type: "Feature",
