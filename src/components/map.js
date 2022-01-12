@@ -7,6 +7,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import './map.css'
 import MapInfo from './mapInfo'
 import { YearContext } from './provider'
+import Afval from './afval'
 
 export default function Map() {
     const [viewport, setViewport] = useState({
@@ -62,7 +63,7 @@ export default function Map() {
           <ReactMapGL
             {...viewport}
             maxZoom={30}
-            mapStyle="mapbox://styles/jody569/ckxhf4soy3s5114mx1ei3id2v"
+            mapStyle="mapbox://styles/jody569/ckybfetie0pg114mjsu44f3l6"
             mapboxApiAccessToken='pk.eyJ1Ijoiam9keTU2OSIsImEiOiJja3g3amJ5MGowMW8wMm5zZTlwN3Fjb2t0In0.99DjUaNvteP2DPXThnnHXg'
             onViewportChange={newviewport => {
               setViewport({ ...newviewport })
@@ -86,7 +87,7 @@ export default function Map() {
                     offsetTop={-25}
                     offsetLeft={-10}
                   >
-                    <div
+                    {/* <div
                       className='cluster-marker'
                       style={{
                         width: `${10 + (pointCount / points.length) * 20}px`,
@@ -111,9 +112,37 @@ export default function Map() {
                           transitionDuration: "auto"
                         })
                       }}
+
                     >
                       {pointCount}
-                    </div>
+                    </div> */}
+                    <Afval
+                      style={{
+                        width: `${10 + (pointCount / points.length) * 20}px`,
+                        height: `${10 + (pointCount / points.length) * 20}px`,
+                      }}
+                      onClick={() => {
+                        const expansionZoom = Math.min(
+                          supercluster.getClusterExpansionZoom(cluster.id),
+                          30
+                        )
+
+                        setShowInfo(false)
+
+                        setViewport({
+                          ...viewport,
+                          latitude,
+                          longitude,
+                          zoom: expansionZoom,
+                          transitionInterpolator: new FlyToInterpolator({
+                            speed: 1
+                          }),
+                          transitionDuration: "auto"
+                        })
+                      }}
+                    >
+                    </Afval>
+
 
                   </Marker>
                 )
