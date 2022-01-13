@@ -41,7 +41,15 @@ export default function Map() {
       }
     }))
 
-    console.log(filteredData )
+    let plastic = []
+
+    for (let i=0; i<filteredData.length; i++) {
+      if (filteredData[i].Material.toLowerCase() === 'aluminum') {
+        plastic++
+      }
+    }
+
+    console.log(plastic)
 
     const bounds = mapRef.current ? mapRef.current.getMap().getBounds().toArray().flat() : null
 
