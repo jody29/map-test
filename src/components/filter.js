@@ -37,7 +37,7 @@ export const Filters = () => {
                     borderRadius: '0',
                 }
             }}
-            defaultValue={2021}
+            defaultValue={2019}
             valueLabelDisplay="auto"
             getAriaValueText={yearClick}
             step={1}

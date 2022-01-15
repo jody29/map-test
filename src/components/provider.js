@@ -4,7 +4,7 @@ import { useState } from "react/cjs/react.development";
 export const YearContext = createContext()
 
 export const Provider = ({ children }) => {
-    const [selectedYear, setYear] = useState('2021')
+    const [selectedYear, setYear] = useState('2019')
 
     return (
         <>
