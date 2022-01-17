@@ -1,0 +1,59 @@
+.introText {
+    background-color: white;
+    display: inline-block;
+    margin-left: 47em;
+    margin-top: 10em;
+    padding: 1em 2em;
+    width: 35em;
+    border-radius: .5em;
+}
+
+.introText h2 {
+    font-size: 2.3em;
+    width: fit-content;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 5px solid #31A3DD;
+    margin-top: .5em;
+}
+
+.introText p {
+    color: #777777;
+}
+
+.introText span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.introText span h3 {
+    color: #31A3DD;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    width: 8em;
+    text-align: center;
+    margin: 0;
+    margin-top: .5em;
+    font-weight: bolder;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.introText span h3::before {
+    content: '"';
+    position: absolute;
+    font-size: 1.6em;
+    left: -.5em;
+    transform: skew(-15deg, 0);
+}
+
+.introText span h3::after {
+    content: '"';
+    position: absolute;
+    right: -.4em;
+    font-size: 1.6em;
+    transform: rotate(180deg) skew(-15deg, 0);
+}

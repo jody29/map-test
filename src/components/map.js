@@ -7,16 +7,14 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import './map.css'
 import MapInfo from './mapInfo'
 import { YearContext } from './provider'
-import afval from '../afval_1.svg'
-import afval2 from '../afval2.svg'
 
 export default function Map() {
     const [viewport, setViewport] = useState({
-        latitude: 52.21483,
+        latitude: 52.35483,
         longitude: 6.300000,
         width: '100vw',
-        height: '40em',
-        zoom: 6.8,
+        height: '100vh',
+        zoom: 7,
         pitch: 0,
         bearing: 0
     })
@@ -55,20 +53,19 @@ export default function Map() {
 
     const bounds = mapRef.current ? mapRef.current.getMap().getBounds().toArray().flat() : null
 
-    const { clusters, supercluster } = useSupercluster({
+    const { clusters } = useSupercluster({
       points,
       bounds,
       zoom: viewport.zoom,
-      options: { radius: 50, maxZoom: 16}
+      options: { radius: viewport.zoom > 10 ? 1000 : 20 , maxZoom: 16}
     })
 
     const hideInfo = () => {
-      viewport.zoom > 6.8 ? setShowInfo(false) : setShowInfo(true)
+      viewport.zoom > 7.1 ? setShowInfo(false) : setShowInfo(true)
     }
 
     return (
         <>
-        <h1>Projecten van Dirk</h1>
           <ReactMapGL
             {...viewport}
             maxZoom={20}
@@ -95,64 +92,31 @@ export default function Map() {
                     longitude={longitude}
                     offsetTop={-25}
                     offsetLeft={-10}
-                  >
-                    {pointCount >= 2000 ? 
-                      <img
-                      src={afval2}
+                  > 
+                      <div
+                      className='cluster-marker'
                       style={{
-                        width: `${80 + (pointCount / points.length) * 20}px`,
-                        height: `${80 + (pointCount / points.length) * 20}px`,
+                        width: `${20 + (pointCount / points.length) * 20}px`,
+                        height: `${20 + (pointCount / points.length) * 20}px`,
                       }} 
                       onClick={() => {
-                        const expansionZoom = Math.min(
-                          supercluster.getClusterExpansionZoom(cluster.id),
-                          30
-                        )
-  
+                        
                         setShowInfo(false)
   
                         setViewport({
                           ...viewport,
                           latitude,
                           longitude,
-                          zoom: expansionZoom,
+                          zoom: 17,
                           transitionInterpolator: new FlyToInterpolator({
                             speed: 1
                           }),
                           transitionDuration: "auto"
                         })
                       }}
-                      alt='big'
                       >
-                      </img> :
-                      <img 
-                      src={afval}
-                      style={{
-                        width: `${50 + (pointCount / points.length) * 20}px`,
-                        height: `${50 + (pointCount / points.length) * 20}px`,
-                      }} 
-                      onClick={() => {
-                        const expansionZoom = Math.min(
-                          supercluster.getClusterExpansionZoom(cluster.id),
-                          30
-                        )
-  
-                        setShowInfo(false)
-  
-                        setViewport({
-                          ...viewport,
-                          latitude,
-                          longitude,
-                          zoom: expansionZoom,
-                          transitionInterpolator: new FlyToInterpolator({
-                            speed: 1
-                          }),
-                          transitionDuration: "auto"
-                        })
-                      }}
-                      alt='small'
-                      ></img>
-}
+                        {pointCount}
+                      </div>
                   </Marker>
                 )
               }
@@ -164,7 +128,7 @@ export default function Map() {
                   longitude={longitude}
                 >
                   <svg width={10} height={10}>
-                    <circle r={2.5} transform='translate(5, 5)' fill='#31A3DD'></circle>
+                    <circle r={5} transform='translate(5, 5)' fill='#31A3DD'></circle>
                   </svg>
                 </Marker>
               )

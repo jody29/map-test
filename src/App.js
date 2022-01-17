@@ -1,14 +1,17 @@
 import './App.css';
-import { Filters } from './components/filter';
-import Map from './components/map';
+import { Routes, Route } from 'react-router-dom'
 import { Provider } from './components/provider';
+import MoveMap from './pages/moveMap';
+import Intro from './pages/intro';
 
 
 function App() {
   return (
     <Provider>
-      <Map />
-      <Filters />
+      <Routes>
+        <Route index element={<Intro />}/>
+        <Route  path='map' element={<MoveMap />}/>
+      </Routes>
     </Provider>
   );
 }
