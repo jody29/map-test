@@ -7,14 +7,16 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import './map.css'
 import MapInfo from './mapInfo'
 import { YearContext } from './provider'
+import { Filters } from './filter'
+import color from '../filters/checkColor'
 
 export default function Map() {
     const [viewport, setViewport] = useState({
-        latitude: 52.35483,
+        latitude: 52.25483,
         longitude: 6.300000,
         width: '100vw',
         height: '100vh',
-        zoom: 7,
+        zoom: 6.8,
         pitch: 0,
         bearing: 0
     })
@@ -22,7 +24,7 @@ export default function Map() {
     const mapRef = useRef()
 
     let lastId = 0
-    const {selectedYear} = useContext(YearContext)
+    const { selectedYear } = useContext(YearContext)
 
     const data = mcData
     const trash = data ? data : []
@@ -31,7 +33,7 @@ export default function Map() {
     
     const points = filteredData.map(data => ({
       type: "Feature",
-      properties: { cluster: false, trashId: lastId++, category: data.Category },
+      properties: { cluster: false, trashId: lastId++, category: data.Category, 'marker-color': color(data.Material.toLowerCase()) },
       geometry: {
         type: "Point",
         coordinates: [
@@ -49,8 +51,6 @@ export default function Map() {
       }
     }
 
-    console.log(plastic)
-
     const bounds = mapRef.current ? mapRef.current.getMap().getBounds().toArray().flat() : null
 
     const { clusters } = useSupercluster({
@@ -59,6 +59,8 @@ export default function Map() {
       zoom: viewport.zoom,
       options: { radius: viewport.zoom > 10 ? 1000 : 20 , maxZoom: 16}
     })
+
+    console.log(clusters)
 
     const hideInfo = () => {
       viewport.zoom > 7.1 ? setShowInfo(false) : setShowInfo(true)
@@ -120,7 +122,6 @@ export default function Map() {
                   </Marker>
                 )
               }
-
               return (
                 <Marker
                   key={`data-${cluster.properties.trashId}`}
@@ -128,13 +129,13 @@ export default function Map() {
                   longitude={longitude}
                 >
                   <svg width={10} height={10}>
-                    <circle r={5} transform='translate(5, 5)' fill='#31A3DD'></circle>
+                    <circle r={5} transform='translate(5, 5)' fill={cluster.properties['marker-color']}></circle>
                   </svg>
                 </Marker>
               )
-            })}
-            
+            })}            
             { showInfo ? <MapInfo /> : null}
+            <Filters />
           </ReactMapGL>
         </>
       );
