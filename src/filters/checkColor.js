@@ -1,22 +1,22 @@
 const color = (material) => {
     if (material === 'plastic') {
-        return '#fff'
+        return '#FF2C2C'
     } else if (material === 'paper') {
-        return '#000'
+        return '#4FC639'
     } else if (material === 'cardboard') {
-        return '#ff7'
+        return '#D6A5FF'
     } else if (material === 'metal') {
-        return '#ff6'
+        return '#7C81FF'
     } else if (material === 'glass') {
-        return '#ff5'
+        return '#FFF855'
     } else if (material === 'microfibre') {
-        return '#ff4'
+        return '#88CDFF'
     } else if (material === 'styrofoam') {
-        return '#ff3'
+        return '#fff'
     } else if (material === 'wood') {
-        return '#ff2'
+        return '#A5771F'
     } else {
-        return '#ff1'
+        return '#909090'
     }
 }
 

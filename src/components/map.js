@@ -10,6 +10,7 @@ import { YearContext } from './provider'
 import { Filters } from './filter'
 import color from '../filters/checkColor'
 import cross from '../cross.svg'
+import MapLegend from './mapLegend'
 
 export default function Map() {
     const [viewport, setViewport] = useState({
@@ -147,13 +148,14 @@ export default function Map() {
                   longitude={longitude}
                 >
                   <svg width={10} height={10}>
-                    <circle r={5} transform='translate(5, 5)' fill={cluster.properties['marker-color']}></circle>
+                    <circle r={3} transform='translate(5, 5)' fill={cluster.properties['marker-color']}></circle>
                   </svg>
                 </Marker>
               )
             })}            
-            { showInfo ? <MapInfo /> : null}
-            { showFilter ? <Filters /> : null}
+            { showInfo ? <MapInfo /> : null }
+            { showFilter ? <Filters /> : null }
+            { showFilter ? <MapLegend /> : null }
             { showFilter ? <img src={cross} alt='cross' className='cross' onClick={
               backToMain
             }></img> : null
