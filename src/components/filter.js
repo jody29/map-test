@@ -32,9 +32,14 @@ export const Filters = () => {
             aria-label="Year"
             sx={{
                 width: '20%',
-                color: 'orange',
+                color: '#FF6600',
                 '& .MuiSlider-thumb': {
                     borderRadius: '0',
+                },
+                '& .MuiSlider-markLabel': {
+                    fontFamily: 'sans-serif',
+                    fontWeight: 'bolder',
+                    color: 'white'
                 }
             }}
             defaultValue={2019}

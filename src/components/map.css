@@ -20,3 +20,9 @@
 h1 {
     font-size: 2em;
 }
+
+.cross {
+    position: absolute;
+    left: 2em;
+    top: 2em
+}

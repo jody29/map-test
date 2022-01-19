@@ -9,6 +9,7 @@ import MapInfo from './mapInfo'
 import { YearContext } from './provider'
 import { Filters } from './filter'
 import color from '../filters/checkColor'
+import cross from '../cross.svg'
 
 export default function Map() {
     const [viewport, setViewport] = useState({
@@ -21,7 +22,9 @@ export default function Map() {
         bearing: 0
     })
     const [showInfo, setShowInfo] = useState(true)
+    const [showFilter, setShowFilter] = useState(false)
     const mapRef = useRef()
+    const {setYear} = useContext(YearContext)
 
     let lastId = 0
     const { selectedYear } = useContext(YearContext)
@@ -64,6 +67,20 @@ export default function Map() {
 
     const hideInfo = () => {
       viewport.zoom > 7.1 ? setShowInfo(false) : setShowInfo(true)
+      viewport.zoom > 16 ? setShowFilter(true) : setShowFilter(false)
+    }
+
+    const backToMain = (e) => {
+      e.preventDefault()
+      setViewport({
+        ...viewport,
+        latitude: 52.25483,
+        longitude: 6.300000,
+        zoom: 6.8
+      })
+      setShowFilter(false)
+      setShowInfo(true)
+      setYear('2019')
     }
 
     return (
@@ -104,6 +121,7 @@ export default function Map() {
                       onClick={() => {
                         
                         setShowInfo(false)
+                        setShowFilter(true)
   
                         setViewport({
                           ...viewport,
@@ -135,7 +153,11 @@ export default function Map() {
               )
             })}            
             { showInfo ? <MapInfo /> : null}
-            <Filters />
+            { showFilter ? <Filters /> : null}
+            { showFilter ? <img src={cross} alt='cross' className='cross' onClick={
+              backToMain
+            }></img> : null
+            }
           </ReactMapGL>
         </>
       );
