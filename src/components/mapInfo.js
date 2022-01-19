@@ -1,6 +1,7 @@
 import mcData from '../data/mcdonalds.json'
 import CountUp from 'react-countup'
 import './mapinfo.css'
+import { Link } from 'react-router-dom'
 
 export default function MapInfo() {
 
@@ -23,9 +24,7 @@ export default function MapInfo() {
             Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem
             </p>
 
-            <button onClick={sayHello}>
-                Lees meer
-            </button>
+            <Link to='/'>Zie meer</Link>
         </div>
     )
 }

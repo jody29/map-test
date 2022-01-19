@@ -11,6 +11,7 @@ import { Filters } from './filter'
 import color from '../filters/checkColor'
 import cross from '../cross.svg'
 import MapLegend from './mapLegend'
+import icon from '../icon.svg'
 
 export default function Map() {
     const [viewport, setViewport] = useState({
@@ -113,11 +114,13 @@ export default function Map() {
                     offsetTop={-25}
                     offsetLeft={-10}
                   > 
-                      <div
-                      className='cluster-marker'
+                      <img 
+                      className='cluster-marker '
+                      src={icon} 
+                      alt='icon'
                       style={{
-                        width: `${20 + (pointCount / points.length) * 20}px`,
-                        height: `${20 + (pointCount / points.length) * 20}px`,
+                        width: `${50 + (pointCount / points.length) * 20}px`,
+                        height: `${50 + (pointCount / points.length) * 20}px`,
                       }} 
                       onClick={() => {
                         
@@ -134,10 +137,9 @@ export default function Map() {
                           }),
                           transitionDuration: "auto"
                         })
-                      }}
+                      }} 
                       >
-                        {pointCount}
-                      </div>
+                      </img>
                   </Marker>
                 )
               }
@@ -147,7 +149,7 @@ export default function Map() {
                   latitude={latitude}
                   longitude={longitude}
                 >
-                  <svg width={10} height={10}>
+                  <svg width={10} height={10} transform='translate(-5, -5)'>
                     <circle r={3} transform='translate(5, 5)' fill={cluster.properties['marker-color']}></circle>
                   </svg>
                 </Marker>

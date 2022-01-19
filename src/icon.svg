@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="121.507" height="162.012" viewBox="0 0 121.507 162.012">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1.093" x2="0.5" y2="0.043" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffb91d"/>
+      <stop offset="0.14" stop-color="#ffa315"/>
+      <stop offset="0.34" stop-color="#ff880c"/>
+      <stop offset="0.55" stop-color="#ff7505"/>
+      <stop offset="0.77" stop-color="#ff6a01"/>
+      <stop offset="1" stop-color="#f60"/>
+    </linearGradient>
+  </defs>
+  <g id="Zwerfinator_icos_Square_oranje_v3" data-name="Zwerfinator icos_Square_oranje_v3" transform="translate(-65.499 -28.496)">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="57.28" height="57.28" transform="translate(65.499 109.505) rotate(-45)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="57.28" height="57.28" transform="translate(105.999 68.999) rotate(-45)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="57.28" height="57.28" transform="translate(105.995 150.005) rotate(-45)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
