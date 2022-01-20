@@ -9,3 +9,11 @@
     align-items: center;
     justify-content: center;
 }
+
+p {
+    color: #777777;
+}
+
+a {
+    text-decoration: none;
+}
