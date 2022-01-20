@@ -14,11 +14,10 @@ const Outro = () => {
         }}
         className='outroPic'
         >
-            <div className='link'>
+            <div className='link2'>
                 <Link to='/map'>
-                    <span className='linkContainer'>
+                    <span className='linkContainer2'>
                         <img src={arrow} alt='arrow'></img>
-
                     </span>
                 </Link>
              </div>

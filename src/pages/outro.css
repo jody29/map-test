@@ -18,11 +18,20 @@ a {
     text-decoration: none;
 }
 
-.link {
+.link2 {
     position: absolute;
     top: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.linkContainer {
+.linkContainer2 {
     border-radius: 0 0 1em 1em;
+    background-color: rgba(0,0,0,.5);
+    padding: 3em 1em 2em;
+}
+
+.linkContainer2 img {
+    transform: rotate(180deg);
 }

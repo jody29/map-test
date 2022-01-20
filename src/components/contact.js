@@ -18,10 +18,10 @@ const Contact = () => {
             <label className='label'>Socials</label>
             <span className='socials'>
                 <a href='https://www.facebook.com/zwerfinator/' target='_blank' rel='noreferrer'>
-                <img src={facebook} alt='facebook'></img>
+                <img src={facebook} alt='facebook' />
                 </a>
                 <a href='https://www.instagram.com/zwerfinator/' target='_blank' rel='noreferrer'>
-                <img src={instagram} alt='instagram'></img>
+                <img src={instagram} alt='instagram' />
                 </a>
             </span>
 
