@@ -8,6 +8,17 @@
     border-radius: .5em;
 }
 
-.more a {
-    background-color: #31A3DD!important;
+.meerInfo {
+    background-color: #31A3DD;
+    color: white;
+    padding: .3em .5em;
+}
+
+.more p:nth-of-type(3) {
+    margin-bottom: 0;
+    margin-top: 3em;
+}
+
+.more p:nth-of-type(4) {
+    margin-top: 0;
 }
