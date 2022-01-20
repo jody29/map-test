@@ -1,0 +1,8 @@
+.more {
+    display: inline-block;
+    background-color: white;
+    margin-left: 1em;
+    height: 20em;
+    padding: 1em;
+    width: 30em;
+}

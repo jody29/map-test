@@ -7,11 +7,6 @@ export default function MapInfo() {
 
     const data = mcData
 
-    const sayHello = (e) => {
-        e.preventDefault()
-        console.log('hello')
-      }
-
     return (
         <div className='mapInfo'>
             <h2>
@@ -21,10 +16,10 @@ export default function MapInfo() {
             <h2>stukken afval verzameld</h2>
 
             <p>
-            Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem
+            Zwerfinator laat zien dat er veel meer zwerfaval is dan we denken. Door middel van meten en onderzoek kan dit visueel gemaakt worden in een interactieve kaart.
             </p>
 
-            <Link to='/'>Zie meer</Link>
+            <Link to='/outro'>Zie meer</Link>
         </div>
     )
 }

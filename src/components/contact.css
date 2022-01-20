@@ -1,0 +1,12 @@
+.contact {
+    display: inline-block;
+    background-color: white;
+    margin-right: 1em;
+    height: 20em;
+    padding: 1em;
+    width: 30em;
+}
+
+.contact p {
+    margin: 0;
+}
