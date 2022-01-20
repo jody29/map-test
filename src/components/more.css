@@ -2,7 +2,7 @@
     display: inline-block;
     background-color: white;
     margin-left: 1em;
-    height: 20em;
+    height: 23em;
     padding: 1em 2em;
     width: 35em;
     border-radius: .5em;
@@ -12,6 +12,7 @@
     background-color: #31A3DD;
     color: white;
     padding: .3em .5em;
+    
 }
 
 .more p:nth-of-type(3) {
@@ -21,4 +22,15 @@
 
 .more p:nth-of-type(4) {
     margin-top: 0;
+}
+
+.meerInfo::before {
+    content: '+';
+    background-color: white;
+    color: #31A3DD;
+    font-weight: bold;
+    padding: 0 .2em;
+    border-radius: 50%;
+    margin-right: .5em;
+    text-align: center;
 }
