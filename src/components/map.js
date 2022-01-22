@@ -12,6 +12,7 @@ import color from '../filters/checkColor'
 import cross from '../cross.svg'
 import MapLegend from './mapLegend'
 import icon from '../icon.svg'
+import locationCheck from '../filters/checkLocation'
 
 export default function Map() {
     const [viewport, setViewport] = useState({
@@ -24,6 +25,7 @@ export default function Map() {
         bearing: 0
     })
     const [showInfo, setShowInfo] = useState(true)
+    const [location, setLocation] = useState('unknown')
     const [showFilter, setShowFilter] = useState(false)
     const mapRef = useRef()
     const {setYear} = useContext(YearContext)
@@ -65,8 +67,6 @@ export default function Map() {
       options: { radius: viewport.zoom > 10 ? 1000 : 20 , maxZoom: 16}
     })
 
-    console.log(clusters)
-
     const hideInfo = () => {
       viewport.zoom > 7.1 ? setShowInfo(false) : setShowInfo(true)
       viewport.zoom > 16 ? setShowFilter(true) : setShowFilter(false)
@@ -78,7 +78,8 @@ export default function Map() {
         ...viewport,
         latitude: 52.25483,
         longitude: 6.300000,
-        zoom: 6.8
+        zoom: 6.8,
+        width: '100vw'
       })
       setShowFilter(false)
       setShowInfo(true)
@@ -126,12 +127,13 @@ export default function Map() {
                         
                         setShowInfo(false)
                         setShowFilter(true)
+                        setLocation(locationCheck(longitude, latitude))
   
                         setViewport({
                           ...viewport,
                           latitude,
                           longitude,
-                          zoom: 17,
+                          zoom: 17,                         
                           transitionInterpolator: new FlyToInterpolator({
                             speed: 1
                           }),
@@ -158,6 +160,7 @@ export default function Map() {
             { showInfo ? <MapInfo /> : null }
             { showFilter ? <Filters /> : null }
             { showFilter ? <MapLegend /> : null }
+            { showFilter ? <h2 className='location'>{location}</h2> : null}
             { showFilter ? <img src={cross} alt='cross' className='cross' onClick={
               backToMain
             }></img> : null
