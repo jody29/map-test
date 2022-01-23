@@ -5,7 +5,6 @@ import replaceComma from '../filters/replaceComma'
 import useSupercluster from 'use-supercluster'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import './map.css'
-import MapInfo from './mapInfo'
 import { YearContext } from './provider'
 import { Filters } from './filter'
 import color from '../filters/checkColor'
@@ -157,7 +156,7 @@ export default function Map() {
                 </Marker>
               )
             })}            
-            { showInfo ? <MapInfo /> : null }
+            { showInfo ? <div className='tutorial'><h3>Klik op een locatie om meer te ontdekken</h3></div> : null }
             { showFilter ? <Filters /> : null }
             { showFilter ? <MapLegend /> : null }
             { showFilter ? <h2 className='location'>{location}</h2> : null}

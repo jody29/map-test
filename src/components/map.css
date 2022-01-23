@@ -22,3 +22,18 @@ h1 {
     width: 100%;
     text-align: center;
 }
+
+.tutorial {
+    background-color: white;
+    display: inline-block;
+    padding: .5em 2em;
+    transform: skew(15deg);
+    position: absolute;
+    right: 6em;
+    top: 17em;
+    box-shadow: 0px 0px 5px black;
+}
+
+.tutorial h3 {
+    transform: skew(-15deg);
+}

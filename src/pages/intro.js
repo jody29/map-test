@@ -2,7 +2,8 @@ import './intro.css'
 import fotoDirk from '../fotoDirk.png'
 import { Link } from 'react-router-dom'
 import IntroText from '../components/introText'
-import arrow from '../arrow.svg'
+import path from '../path.svg'
+import Amount from './amount'
 
 const Intro = () => {
     return (
@@ -15,14 +16,16 @@ const Intro = () => {
          >
              <IntroText />
              <div className='link'>
-                <Link to='/map'>
+                
                     <span className='linkContainer'>
-                        <img src={arrow} alt='arrow'></img>
+                        <img src={path} alt='path'></img>
 
                     </span>
-                </Link>
+                
              </div>
+             
          </div>
+         <Amount />
         </>
     )
 }

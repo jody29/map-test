@@ -11,12 +11,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    bottom: 2em;
+    bottom: -.5em;
     position: absolute;
 }
 
-.linkContainer {
-    padding: 3em 1em 2em;
-    border-radius: 1em 1em 0 0;
-    background-color: rgba(0,0,0,.5);
-}
+
