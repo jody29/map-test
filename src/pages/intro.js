@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom'
 import IntroText from '../components/introText'
 import path from '../path.svg'
 import Amount from './amount'
+import zwerfinator from '../zwerfinator.svg'
+import Map from '../components/map'
 
 const Intro = () => {
     return (
         <>
+         <img src={zwerfinator} alt='logo' className='logo'></img>
          <div 
          style={{
              backgroundImage: `url(${fotoDirk})`
@@ -26,6 +29,7 @@ const Intro = () => {
              
          </div>
          <Amount />
+         <Map />
         </>
     )
 }
