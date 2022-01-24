@@ -1,5 +1,5 @@
 const locationCheck = (longitude, latitude) => {
-    if (latitude === 52.41550850887168 && longitude === 4.912068843841553) {
+    if (latitude === 52.41550850887168 || 52.4159076816936 || 4.9126482009887695 && longitude === 4.912068843841553 || 4.912197589874268 || 4.9126482009887695) {
         return 'Amsterdam Noord'
     } else if (latitude === 52.35592584628199 && longitude === 4.7733235359191895) {
         return 'Amsterdam Osdorp'
