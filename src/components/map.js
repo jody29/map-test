@@ -49,13 +49,13 @@ export default function Map() {
       }
     }))
 
-    let plastic = []
+    // let plastic = []
 
-    for (let i=0; i<filteredData.length; i++) {
-      if (filteredData[i].Material.toLowerCase() === 'aluminum') {
-        plastic++
-      }
-    }
+    // for (let i=0; i<filteredData.length; i++) {
+    //   if (filteredData[i].Material.toLowerCase() === 'aluminum') {
+    //     plastic++
+    //   }
+    // }
 
     const bounds = mapRef.current ? mapRef.current.getMap().getBounds().toArray().flat() : null
 
