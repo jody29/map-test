@@ -24,10 +24,10 @@ export default function Map() {
         bearing: 0
     })
     const [showInfo, setShowInfo] = useState(true)
-    const [location, setLocation] = useState('unknown')
     const [showFilter, setShowFilter] = useState(false)
     const mapRef = useRef()
     const {setYear} = useContext(YearContext)
+    const {setLocation} = useContext(YearContext)
 
     let lastId = 0
     const { selectedYear } = useContext(YearContext)
@@ -83,6 +83,7 @@ export default function Map() {
       setShowFilter(false)
       setShowInfo(true)
       setYear('2019')
+      setLocation('unknown')
     }
 
     return (
@@ -159,7 +160,6 @@ export default function Map() {
             { showInfo ? <div className='tutorial'><h3>Klik op een locatie om meer te ontdekken</h3></div> : null }
             { showFilter ? <Filters /> : null }
             { showFilter ? <MapLegend /> : null }
-            { showFilter ? <h2 className='location'>{location}</h2> : null}
             { showFilter ? <img src={cross} alt='cross' className='cross' onClick={
               backToMain
             }></img> : null

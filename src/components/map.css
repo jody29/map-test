@@ -1,9 +1,10 @@
 .cluster-marker {
     cursor: pointer;
+    transform: rotate(-90deg) ;
 }
 
 .cluster-marker:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(-90deg);
     transition: 100ms;
 }
 

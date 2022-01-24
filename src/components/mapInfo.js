@@ -15,11 +15,7 @@ export default function MapInfo() {
             <h1><CountUp start={0} end={data.length} duration={3} useEasing={true}/></h1>
             <h2>stukken afval verzameld</h2>
 
-            <p>
-            Zwerfinator laat zien dat er veel meer zwerfaval is dan we denken. Door middel van meten en onderzoek kan dit visueel gemaakt worden in een interactieve kaart.
-            </p>
-
-            <Link to='/outro'>Zie meer</Link>
+            <Link to='/map'>Zie meer</Link>
         </div>
     )
 }

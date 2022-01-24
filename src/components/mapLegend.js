@@ -1,4 +1,6 @@
+import { useContext } from 'react'
 import './maplegend.css'
+import { YearContext } from './provider'
 
 const MapLegend = () => {
     const colors = [
@@ -13,8 +15,13 @@ const MapLegend = () => {
         {material: 'aluminium', color: '#909090'},
 ]
 
+const {selectedLocation} = useContext(YearContext)
+
+
+
     return (
         <div className="legend">
+            <h2>{selectedLocation}</h2>
             <ul>
                 {colors.map(color => (
                     <li>

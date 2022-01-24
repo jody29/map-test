@@ -41,9 +41,9 @@
       "not op_mini all"
     ],
     "development": [
-      "not chrome < 51",
+      "last 1 chrome version",
       "last 1 firefox version",
-      "not safari < 10"
+      "last 1 safari version"
     ]
   }
 }
