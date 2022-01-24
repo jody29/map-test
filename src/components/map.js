@@ -73,17 +73,16 @@ export default function Map() {
 
     const backToMain = (e) => {
       e.preventDefault()
+      setYear('2019')
       setViewport({
         ...viewport,
         latitude: 52.25483,
         longitude: 6.300000,
-        zoom: 6.8,
-        width: '100vw'
+        zoom: 6.8
       })
       setShowFilter(false)
       setShowInfo(true)
-      setYear('2019')
-      setLocation('unknown')
+      setLocation(null)
     }
 
     return (
@@ -124,10 +123,12 @@ export default function Map() {
                         height: `${50 + (pointCount / points.length) * 20}px`,
                       }} 
                       onClick={() => {
+                        console.log(longitude, latitude)
                         
                         setShowInfo(false)
                         setShowFilter(true)
                         setLocation(locationCheck(longitude, latitude))
+
   
                         setViewport({
                           ...viewport,

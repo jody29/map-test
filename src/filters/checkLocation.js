@@ -13,6 +13,8 @@ const locationCheck = (longitude, latitude) => {
         return 'Deventer'
     } else if (latitude === 53.195923385025566 && longitude === 6.518604755401611) {
         return 'Eelderwolde'
+    } else {
+        return 'Try again...'
     }
 }
 

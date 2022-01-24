@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import './maplegend.css'
 import { YearContext } from './provider'
 
-const MapLegend = () => {
+const MapLegend = ({lon, lat}) => {
     const colors = [
         {material: 'plastic', color: '#FF2C2C'}, 
         {material: 'papier', color: '#4FC639'}, 
@@ -17,11 +17,9 @@ const MapLegend = () => {
 
 const {selectedLocation} = useContext(YearContext)
 
-
-
     return (
         <div className="legend">
-            <h2>{selectedLocation}</h2>
+            <h2>{selectedLocation ? selectedLocation : 'Try again'}</h2>
             <ul>
                 {colors.map(color => (
                     <li>
