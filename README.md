@@ -9,7 +9,7 @@
 * [💡 Concept](https://github.com/jody29/frontend-applications/blob/main/README.md#-concept)
 * [⚙️ Installation](https://github.com/jody29/frontend-applications#%EF%B8%8F-installation)
 * [:pray: Wishlist](https://github.com/jody29/frontend-applications#pray-wishlist)
-* [:white_check_mark: Rubric](https://github.com/jody29/frontend-applications#white_check_mark-rubric)
+* [:white_check_mark: Assignment](https://github.com/jody29/frontend-applications#white_check_mark-rubric)
 * [:information_source: Resources](https://github.com/jody29/frontend-applications#information_source-resources)
 * [:copyright: License](https://github.com/jody29/frontend-applications#copyright-license)
 
