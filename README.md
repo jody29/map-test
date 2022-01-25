@@ -6,7 +6,8 @@
 
 
 ## Table of contents
-* [💡 Concept](https://github.com/jody29/zwerfinator_interactive_map/blob/main/README.md#-concept)
+* [💡 Concept](https://github.com/jody29/zwerfinator_interactive_map#-concept)
+* [📦 NPM Packages used](https://github.com/jody29/zwerfinator_interactive_map#-npm-packages-used)
 * [⚙️ Installation](https://github.com/jody29/zwerfinator_interactive_map#%EF%B8%8F-installation)
 * [:pray: Wishlist](https://github.com/jody29/zwerfinator_interactive_map#pray-wishlist)
 * [:white_check_mark: Assignment](https://github.com/jody29/zwerfinator_interactive_map#white_check_mark-rubric)
