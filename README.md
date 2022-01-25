@@ -14,7 +14,7 @@
 * [:copyright: License](https://github.com/jody29/zwerfinator_interactive_map#copyright-license)
 
 ## 💡 Concept
-The concept for this project is to render a map of all the municipalities in the Netherlands. Every municipality gets a color which represents the percentage of people who are vaccinated in that municipality. This will show in which municipalities the most people are vaccinated. This will also show which municipalities have a low vaccination percentage
+The concept for this project is to show the trash that the zwerfinator cleared from various McDonalds locations in the Netherlands. The trash can be seen on an interactive map. The user can click on a location and see the trash with different colors that corresponds to the material of the trash.
 
 ## ⚙️ Installation
 Clone the repo to your own device
@@ -35,7 +35,8 @@ $ npm start
 
 
 ## :white_check_mark: Assignment
-Create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together.
+Create an interactive datavisualisation that cohere with the wishes and vision of the given client.
+
 
 
 ## :information_source: Resources
