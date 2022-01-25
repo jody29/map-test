@@ -16,6 +16,15 @@
 ## 💡 Concept
 The concept for this project is to show the trash that the zwerfinator cleared from various McDonalds locations in the Netherlands. The trash can be seen on an interactive map. The user can click on a location and see the trash with different colors that corresponds to the material of the trash.
 
+## 📦 NPM Packages used
+* [react](https://www.npmjs.com/package/react)
+* [react-countup](https://www.npmjs.com/package/react-countup)
+* [react-dom](https://www.npmjs.com/package/react-dom)
+* [react-map-gl](https://www.npmjs.com/package/react-map-gl)
+* [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+* [use-supercluster](https://www.npmjs.com/package/use-supercluster)
+
+
 ## ⚙️ Installation
 Clone the repo to your own device
 ```bash
@@ -45,8 +54,8 @@ Create an interactive datavisualisation that cohere with the wishes and vision o
 * Dirk Groot, aka zwerfinator.
 
 ### data sources
-* Vaccination data by RIVM: [vaccination](https://data.rivm.nl/covid-19/COVID-19_vaccinatiegraad_per_gemeente_per_week_leeftijd.json)
-* Topojson from the dutch [ministry of health welfare and sport](https://github.com/minvws): [topojson](https://github.com/minvws/nl-covid19-data-dashboard/blob/develop/packages/app/src/components/choropleth/logic/nl-vr-gm.topo.json)
+* McDonalds trash data from [zwerfinator](http://zwerfinator.nl/)
+* Map from [mapbox](https://www.mapbox.com/)
 
 
 ## :copyright: License
