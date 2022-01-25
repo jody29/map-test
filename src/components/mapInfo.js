@@ -15,7 +15,7 @@ export default function MapInfo() {
             <h1><CountUp start={0} end={data.length} duration={3} useEasing={true}/></h1>
             <h2>stukken afval verzameld</h2>
 
-            <Link to='/map'>Zie de resultaten</Link>
+            <Link to='/map'>Bekijk interactieve kaart</Link>
         </div>
     )
 }

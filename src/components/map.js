@@ -73,7 +73,7 @@ export default function Map() {
 
     const backToMain = (e) => {
       e.preventDefault()
-      setYear('2019')
+      setYear(2019)
       setViewport({
         ...viewport,
         latitude: 52.25483,

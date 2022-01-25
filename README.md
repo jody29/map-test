@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+### Project Information Design
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Zwerfinator interactive map 
+![preview](public/preview.png)
+[Live preview](https://zwerfinator-eight.vercel.app)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of contents
+* [💡 Concept](https://github.com/jody29/frontend-applications/blob/main/README.md#-concept)
+* [⚙️ Installation](https://github.com/jody29/frontend-applications#%EF%B8%8F-installation)
+* [:pray: Wishlist](https://github.com/jody29/frontend-applications#pray-wishlist)
+* [:white_check_mark: Rubric](https://github.com/jody29/frontend-applications#white_check_mark-rubric)
+* [:information_source: Resources](https://github.com/jody29/frontend-applications#information_source-resources)
+* [:copyright: License](https://github.com/jody29/frontend-applications#copyright-license)
 
-### `npm start`
+## 💡 Concept
+The concept for this project is to render a map of all the municipalities in the Netherlands. Every municipality gets a color which represents the percentage of people who are vaccinated in that municipality. This will show in which municipalities the most people are vaccinated. This will also show which municipalities have a low vaccination percentage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ⚙️ Installation
+Clone the repo to your own device
+```bash
+$ git clone https://github.com/jody29/frontend-applications.git
+```
+install the npm dependencies
+```bash
+$ npm install
+```
+run the server on your browser
+```bash
+$ npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## :pray: Wishlist
+* A possibility that users can filter on the materials per location.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :white_check_mark: Assignment
+Create a client-side application in JavaScript which dynamically renders data to views using either a front-end framework or system created by you. Reflect on the merits and costs of frameworks together.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :information_source: Resources
+### Credits
+* All the teachers at the [CMD Tech Track](https://github.com/cmda-tt).
+* My support group.
+* All other students who helped me in time of need.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### data sources
+* Vaccination data by RIVM: [vaccination](https://data.rivm.nl/covid-19/COVID-19_vaccinatiegraad_per_gemeente_per_week_leeftijd.json)
+* Topojson from the dutch [ministry of health welfare and sport](https://github.com/minvws): [topojson](https://github.com/minvws/nl-covid19-data-dashboard/blob/develop/packages/app/src/components/choropleth/logic/nl-vr-gm.topo.json)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## :copyright: License
+![GitHub](https://img.shields.io/github/license/jody29/TechTrack?style=for-the-badge)
