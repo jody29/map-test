@@ -1,5 +1,5 @@
 import MapInfo from "../components/mapInfo"
-import afvalPic from '../afval_bijelkaar2.png'
+import afvalPic from '../afval_bijelkaar3.png'
 import './amount.css'
 
 const Amount = () => {
