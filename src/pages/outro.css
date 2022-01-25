@@ -20,16 +20,10 @@ a {
 
 .link2 {
     position: absolute;
-    top: 2em;
+    top: -.5em;
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.linkContainer2 {
-    border-radius: 0 0 1em 1em;
-    background-color: rgba(0,0,0,.5);
-    padding: 3em 1em 2em;
 }
 
 .linkContainer2 img {

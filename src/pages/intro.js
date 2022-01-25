@@ -5,6 +5,7 @@ import IntroText from '../components/introText'
 import path from '../path.svg'
 import Amount from './amount'
 import zwerfinator from '../zwerfinator.svg'
+import Outro from './outro'
 
 const Intro = () => {
     return (
@@ -28,6 +29,7 @@ const Intro = () => {
              
          </div>
          <Amount />
+         <Outro />
         </>
     )
 }
