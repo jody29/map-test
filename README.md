@@ -17,6 +17,7 @@
 The concept for this project is to show the trash that the zwerfinator cleared from various McDonalds locations in the Netherlands. The trash can be seen on an interactive map. The user can click on a location and see the trash with different colors that corresponds to the material of the trash.
 
 ## 📦 NPM Packages used
+* [@mui/material](https://www.npmjs.com/package/@mui/material)
 * [react](https://www.npmjs.com/package/react)
 * [react-countup](https://www.npmjs.com/package/react-countup)
 * [react-dom](https://www.npmjs.com/package/react-dom)
