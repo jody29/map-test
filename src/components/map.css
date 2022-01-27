@@ -38,3 +38,9 @@ h1 {
 .tutorial h3 {
     transform: skew(-20deg);
 }
+
+.back {
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+}

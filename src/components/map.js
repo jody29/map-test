@@ -12,6 +12,8 @@ import cross from '../cross.svg'
 import MapLegend from './mapLegend'
 import icon from '../icon.svg'
 import locationCheck from '../filters/checkLocation'
+import back from '../back.svg'
+import { Link } from 'react-router-dom'
 
 export default function Map() {
     const [viewport, setViewport] = useState({
@@ -48,14 +50,6 @@ export default function Map() {
         ]
       }
     }))
-
-    // let plastic = []
-
-    // for (let i=0; i<filteredData.length; i++) {
-    //   if (filteredData[i].Material.toLowerCase() === 'aluminum') {
-    //     plastic++
-    //   }
-    // }
 
     const bounds = mapRef.current ? mapRef.current.getMap().getBounds().toArray().flat() : null
 
@@ -159,6 +153,7 @@ export default function Map() {
               )
             })}            
             { showInfo ? <div className='tutorial'><h3>Klik op een locatie om meer te ontdekken</h3></div> : null }
+            { showInfo ? <Link to='/' className='back'><img src={back} alt='back'></img></Link> : null}
             { showFilter ? <Filters /> : null }
             { showFilter ? <MapLegend /> : null }
             { showFilter ? <img src={cross} alt='cross' className='cross' onClick={
